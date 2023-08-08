@@ -3,8 +3,8 @@ import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { main } from '@popperjs/core';
 import videoBg from './videos/cloud.mp4'
-
-
+import videoRain from './videos/rain.mp4'
+import videoClear from './videos/sunny.mp4'
 
 
 
@@ -15,7 +15,7 @@ const api = {
 function App() {
   const [search, setSearch] = useState('');
   const [weather, setWeather] = useState({});
- 
+  const [videoUrl, setVideoUrl] = useState(videoBg);
 
 
   const clearSearch = () => { 
@@ -28,6 +28,15 @@ function App() {
     .then(res => res.json())
     .then(result =>{
       setWeather(result);
+
+      if (result.weather[0].main === 'Rain') {
+        setVideoUrl(videoRain); 
+      } else if(result.weather[0].main === 'Clear') {
+        setVideoUrl(videoClear); 
+      } else {
+        setVideoUrl(videoBg); 
+      }
+
       clearSearch();
     });
   }
@@ -38,7 +47,7 @@ function App() {
     <div className='main'>
       <div className="overlay"></div>
       <video 
-      src={videoBg} 
+      src={videoUrl} 
       autoPlay 
       loop 
       muted
