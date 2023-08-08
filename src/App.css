@@ -1,0 +1,76 @@
+:root{
+margin:0;
+padding:0;
+box-sizing: border-box;
+}
+
+.box{
+  justify-content: center;
+  align-items: center;
+  margin-top:20vh;
+  text-align: center;
+  color:white
+}
+
+/* input part */
+
+.search-city{
+  border-radius: 5px;
+  border:0.3px solid grey;
+  line-height: 2rem;
+  border: none;
+  background-color:rgba(0,0,0,0.2);
+  color:white;
+  letter-spacing: 2px;
+}
+
+
+.custom-btn{
+ border-radius: 7px;
+letter-spacing: 1px;
+background-color: rgba(1, 23, 36, 0.758);
+color:white;
+border:none;
+}
+
+.custom-btn:hover{
+  border:0.5px solid white;
+  cursor: pointer;
+  background-color: rgba(29, 72, 97, 0.758);
+}
+
+
+
+/*VIDEO  */
+video{
+  width:100%;
+  height:100vh;
+  object-fit: cover;
+}
+
+.content{
+  position: absolute;
+  width:100%;
+  top:0;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.overlay{
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height:100%;
+  background: rgba(0,0,0,.2);
+}
+
+/* WEATHER DATA */
+
+.datas{
+background-color: rgba(0,0,0,.2);
+border-radius:10px;
+font-size: 19px;
+letter-spacing: 2px;
+}
