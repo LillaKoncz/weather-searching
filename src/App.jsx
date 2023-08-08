@@ -10,7 +10,7 @@ import videoClear from './videos/sunny.mp4'
 
 const api = {
   key: '5309920c2e9a286775b3aa9eba0c2989',
-  base: 'http://api.openweathermap.org/data/2.5/'
+  base: 'https://api.openweathermap.org/data/2.5/'
 }
 function App() {
   const [search, setSearch] = useState('');
